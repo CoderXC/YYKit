@@ -128,6 +128,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable UIImage *)imageWithSize:(CGSize)size drawBlock:(void (^)(CGContextRef context))drawBlock;
 
+/**
+ *  获取屏幕截图
+ *
+ *  @return 屏幕截图图像
+ */
++ (UIImage *)screenShot;
+    
 #pragma mark - Image Info
 ///=============================================================================
 /// @name Image Info

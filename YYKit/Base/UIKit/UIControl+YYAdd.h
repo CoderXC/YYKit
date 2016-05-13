@@ -73,6 +73,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)removeAllBlocksForControlEvents:(UIControlEvents)controlEvents;
 
+//扩大点击范围
+- (void)setEnlargeEdgeWithTop:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom left:(CGFloat)left;
+
 @end
 
 NS_ASSUME_NONNULL_END
