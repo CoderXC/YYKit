@@ -8,6 +8,13 @@
 
 #import "UILable+YYAdd.h"
 
-@implementation UILable_YYAdd
+@implementation UILabel(YYAdd)
+
++ (UILabel *)createLabelWithFrame:(CGRect)frame font:(UIFont *)font textColor:(UIColor *)textColor {
+    UILabel *lable = [[UILabel alloc] initWithFrame:frame];
+    lable.font = font;
+    lable.textColor = textColor;
+    return lable;
+}
 
 @end

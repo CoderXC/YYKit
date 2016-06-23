@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UILable_YYAdd : UILable
+@interface UILabel(YYAdd)
+
++ (UILabel *)createLabelWithFrame:(CGRect)frame font:(UIFont *)font textColor:(UIColor *)textColor;
 
 @end
