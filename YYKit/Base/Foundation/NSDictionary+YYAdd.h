@@ -146,6 +146,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSNumber *)numverValueForKey:(NSString *)key default:(nullable NSNumber *)def;
 - (nullable NSString *)stringValueForKey:(NSString *)key default:(nullable NSString *)def;
 
+/**
+ *  把字典中存在nil或者null的换成空字串 @""
+ */
+- (instancetype)getSafeDictionary;
+
 @end
 
 

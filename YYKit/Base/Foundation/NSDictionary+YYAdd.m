@@ -352,6 +352,18 @@ return def;
     return def;
 }
 
+- (instancetype)getSafeDictionary
+{
+    NSMutableDictionary * tempDic = [self mutableCopy];
+    for (NSString * key in tempDic) {
+        id value = tempDic[key];
+        if (!value || value == [NSNull null]) {
+            [tempDic setObject:@"" forKey:key];
+        };
+    }
+    return [tempDic copy];
+}
+
 @end
 
 
