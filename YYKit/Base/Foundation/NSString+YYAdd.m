@@ -20,6 +20,20 @@ YYSYNTH_DUMMY_CLASS(NSString_YYAdd)
 
 @implementation NSString (YYAdd)
 
+- (CGFloat)getHeightWithMaxWidth:(CGFloat)maxWidth andFont:(UIFont *)font {
+    if (maxWidth == 0 || !font) {
+        return 0;
+    }
+    return [self boundingRectWithSize:CGSizeMake(maxWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading | NSStringDrawingUsesDeviceMetrics attributes:@{NSFontAttributeName : font} context:nil].size.height;
+}
+
+- (CGFloat)getWidthWithMaxHeight:(CGFloat)maxHeight andFont:(UIFont *)font {
+    if (maxHeight == 0 || !font) {
+        return 0;
+    }
+    return [self boundingRectWithSize:CGSizeMake(MAXFLOAT, maxHeight) options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading | NSStringDrawingUsesDeviceMetrics attributes:@{NSFontAttributeName : font} context:nil].size.width;
+}
+
 - (NSString *)md2String {
     return [[self dataUsingEncoding:NSUTF8StringEncoding] md2String];
 }

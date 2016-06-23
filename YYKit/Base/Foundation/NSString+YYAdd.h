@@ -18,6 +18,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface NSString (YYAdd)
 
+#pragma mark - 计算文本宽高
+///=============================================================================
+/// @name 计算文本宽高
+///=============================================================================
+- (CGFloat)getHeightWithMaxWidth:(CGFloat)maxWidth andFont:(UIFont *)font;
+- (CGFloat)getWidthWithMaxHeight:(CGFloat)maxHeight andFont:(UIFont *)font;
+
 #pragma mark - Hash
 ///=============================================================================
 /// @name Hash
